@@ -1,0 +1,5 @@
+job-build:
+  tags:
+    - ci
+  script:
+    - server 

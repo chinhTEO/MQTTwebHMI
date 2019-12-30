@@ -1,0 +1,313 @@
+{% load static %}"
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Tables</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="{% static "css/font-face.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/font-awesome-4.7/css/font-awesome.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/font-awesome-5/css/fontawesome-all.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/mdi-font/css/material-design-iconic-font.min.css" %}" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="{% static "vendor/bootstrap-4.1/bootstrap.min.css" %}" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{% static "vendor/animsition/animsition.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/wow/animate.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/css-hamburgers/hamburgers.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/slick/slick.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/select2/select2.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "vendor/perfect-scrollbar/perfect-scrollbar.css" %}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{% static "css/thethelme.css" %}" rel="stylesheet" media="all">
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="{% static "index.html" %}">
+                            <img src="{% static "images/icon/logo.png" %}" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a href="{% static "chart.html" %}">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="{% static "#" %}">
+                    <img src="{% static "images/icon/logo.png" %}" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a href="{% static "chart.html" %}">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- END HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- DATA TABLE -->
+                                <h3 class="title-5 m-b-35">data table</h3>
+                                <div class="table-data__tool">
+                                    <div class="table-data__tool-left">
+                                        <div class="rs-select2--light rs-select2--md">
+                                            <select class="js-select2" name="property">
+                                                <option selected="selected">All Properties</option>
+                                                <option value="">Option 1</option>
+                                                <option value="">Option 2</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                        <div class="rs-select2--light rs-select2--sm">
+                                            <select class="js-select2" name="time">
+                                                <option selected="selected">Today</option>
+                                                <option value="">3 Days</option>
+                                                <option value="">1 Week</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                        <button class="au-btn-filter">
+                                            <i class="zmdi zmdi-filter-list"></i>filters</button>
+                                    </div>
+                                    <div class="table-data__tool-right">
+                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small" id="btn-connect">
+                                            <i class="zmdi zmdi-code-setting"></i>connect</button>
+                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small" id="btn-subcribe-all">
+                                            <i class="zmdi zmdi-code-setting"></i>subcribe all</button>
+                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                            <i class="zmdi zmdi-plus"></i>add item</button>
+                                        <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
+                                            <select class="js-select2" name="type">
+                                                <option selected="selected">Export</option>
+                                                <option value="">Option 1</option>
+                                                <option value="">Option 2</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive table-responsive-data2">
+                                    <table class="table table-data2">
+                                        <thead>
+                                            <tr>
+                                                <th>device</th>
+                                                <th>topic</th>
+                                                <th>role</th>
+                                                <th>last update</th>
+                                                <th>msg</th>
+                                                <th>cmd</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for object in objects %}
+                                                <tr class="tr-shadow">
+                                                    <td>{{ object.device }}</td>
+                                                    <td class="desc">{{ object.topicName }}</td>
+                                                    <td>{{ object.role }}</td>
+                                                    <td>{{ object.lastUpdated }}</td>
+                                                    <td>
+                                                       <span class="status--process" id="{{object.topicName}}_msg">ON</span>
+                                                    </td>
+                                                    <td>
+                                                        <input class="au-input au-input--sm" type="text" name="publish_msg" placeholder="input user" id="{{ object.topicName }}_cmd"/>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-data-feature">
+                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Send" onclick="publish('{{ object.topicName }}', document.getElementById('{{ object.topicName }}_cmd').value)">
+                                                                <i class="zmdi zmdi-mail-send"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="spacer"></tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- END DATA TABLE -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{% static "vendor/bootstrap-4.1/popper.min.js" %}"></script>
+    <script src="{% static "vendor/bootstrap-4.1/bootstrap.min.js" %}"></script>
+    <!-- Vendor JS       -->
+    <script src="{% static "vendor/slick/slick.min.js" %}">
+    </script>
+    <script src="{% static "vendor/wow/wow.min.js" %}"></script>
+    <script src="{% static "vendor/animsition/animsition.min.js" %}"></script>
+    <script src="{% static "vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" %}">
+    </script>
+    <script src="{% static "vendor/counter-up/jquery.waypoints.min.js" %}"></script>
+    <script src="{% static "vendor/counter-up/jquery.counterup.min.js" %}">
+    </script>
+    <script src="{% static "vendor/circle-progress/circle-progress.min.js" %}"></script>
+    <script src="{% static "vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>
+    <script src="{% static "vendor/chartjs/Chart.bundle.min.js" %}"></script>
+    <script src="{% static "vendor/select2/select2.min.js" %}">
+    </script>
+
+    <!-- Main JS-->
+    <script src="{% static "js/main.js" %}"></script>
+
+    <!--custome JS -->
+    <script>
+        $("#btn-connect").on("click", function(e) {
+            e.preventDefault();
+            $.ajax({type: "POST",
+                url: "/ajax/mqttclient/connect/",
+                data: { 
+                    cmd : "connect"
+                },
+                success:function(result) {
+                    alert('connect to ' + result['host'] + ' with port ' + result['port'] + ' status: ' + result['msg']);
+                },
+                error:function(result) {
+                    alert('error');
+                }
+            });
+        });
+
+        $("#btn-subcribe-all").on("click", function(e) {
+            {% for object in objects %}
+                subcribe('{{object.topicName}}', () => {
+                    update('{{object.topicName}}','{{object.topicName}}_msg');
+                });
+            {% endfor %}
+        });
+
+        function publish(topic, msg) {
+            if(msg == ""){
+                alert('plz input string');
+            }else{
+                $.ajax({type: "POST",
+                    url: "/ajax/mqttclient/publish/",
+                    data: { 
+                        cmd : "publish",
+                        topic : topic,
+                        msg : msg,
+                    },
+                    success:function(result) {
+                        alert('publish ' + msg + ' to ' + topic + ' return: ' + result['msg']);
+                    },
+                    error:function(result) {
+                        alert('error');
+                    }
+                });
+            }
+        }
+
+        function subcribe(topic, successFunc) {
+            $.ajax({type: "POST",
+                url: "/ajax/mqttclient/subcribe/",
+                data: {
+                    cmd : "subcribe",
+                    topic : topic,
+                },
+                success:function(result) {
+                    successFunc();
+                },
+                error:function(result) {
+                    alert('error');
+                }
+            });
+        }
+
+        function update(topic, htmlId) {
+            $.ajax({type: "POST",
+                url: "/ajax/mqttclient/update/",
+                data: {
+                    cmd : "update",
+                    topic : topic,
+                },
+                success:function(result) {
+                    document.getElementById(htmlId).innerHTML = result['msg'];
+                },
+                error:function(result) {
+                    alert('error');
+                }
+            });
+            setTimeout(update, 1000, topic, htmlId)
+        }
+
+    </script>
+
+</body>
+
+</html>
+<!-- end document-->
